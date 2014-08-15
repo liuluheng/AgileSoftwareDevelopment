@@ -5,7 +5,7 @@ Paycheck::~Paycheck()
 }
 
 Paycheck::Paycheck(const Date& payPeriodStartDate,
-		   const Date& payPeriodEndDate)
+                   const Date& payPeriodEndDate)
 : itsPayPeriodStartDate(payPeriodStartDate)
 , itsPayPeriodEndDate(payPeriodEndDate)
 {

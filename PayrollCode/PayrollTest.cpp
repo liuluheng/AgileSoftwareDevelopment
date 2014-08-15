@@ -411,9 +411,9 @@ void PayrollTest::TestPaySingleSalariedEmployee()
 }
 
 void PayrollTest::ValidatePaycheck(PaydayTransaction& pt,
-				   int empid,
-				   const Date& payDate,
-				   double pay)
+                                   int empid,
+                                   const Date& payDate,
+                                   double pay)
 {
   Paycheck* pc = pt.GetPaycheck(empid);
   assert(pc);

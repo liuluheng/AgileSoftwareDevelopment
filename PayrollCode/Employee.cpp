@@ -16,10 +16,10 @@ Employee::Employee(int empid, string name, string address)
 : itsEmpid(empid)
 , itsName(name)
 , itsAddress(address)
-, itsAffiliation(new NoAffiliation())
 , itsClassification(0)
 , itsSchedule(0)
 , itsPaymentMethod(0)
+, itsAffiliation(new NoAffiliation())
 {
 }
 

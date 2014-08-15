@@ -26,7 +26,7 @@ CPPFLAGS = -g -Os -Wall -I "cppunit1.5/CppUnit/test/framework" -I "cppunit1.5/Cp
 #CPPFLAGS = -g -Os -Wall -stdlib=libc++ -I "cppunit1.5/CppUnit/test/framework" -I "cppunit1.5/CppUnit/test/textui"
 LDFLAGS = -L "cppunit1.5/CppUnit/test/framework" -L "cppunit1.5/CppUnit/test/textui"
 
-all: 	clean $(DOTO)
+all: $(DOTO)
 
 clean:	
 	rm -f *.o

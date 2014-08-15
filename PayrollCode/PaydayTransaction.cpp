@@ -13,7 +13,7 @@ PaydayTransaction::~PaydayTransaction()
 }
 
 PaydayTransaction::PaydayTransaction(Date payDate)
-  :itsPayDate(payDate)
+:itsPayDate(payDate)
 {
 }
 
@@ -21,16 +21,16 @@ void PaydayTransaction::Execute()
 {
   list<int> empIds;
   GpayrollDatabase.GetAllEmployeeIds(empIds);
-  
+
   list<int>::iterator i = empIds.begin();
   for (; i != empIds.end(); i++) {
     int empId = *i;
     if (Employee* e = GpayrollDatabase.GetEmployee(empId)) {
       if (e->IsPayDate(itsPayDate)) {
-	Paycheck* pc = new Paycheck(e->GetPayPeriodStartDate(itsPayDate),
-				    itsPayDate);
-	itsPaychecks[empId] = pc;
-	e->Payday(*pc);
+        Paycheck* pc = new Paycheck(e->GetPayPeriodStartDate(itsPayDate),
+                                    itsPayDate);
+        itsPaychecks[empId] = pc;
+        e->Payday(*pc);
       }
     }
   }

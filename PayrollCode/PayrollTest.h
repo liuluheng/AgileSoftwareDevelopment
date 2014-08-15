@@ -14,7 +14,7 @@ class PayrollTest: public TestCase
  public:
   PayrollTest (std::string name) : TestCase (name) {}
 
-  void			setUp ();
+  void			     setUp ();
   static Test		*suite ();
 
  protected:
@@ -58,11 +58,10 @@ class PayrollTest: public TestCase
   void TestServiceChargesSpanningMultiplePayPeriods();
  private:
   void ValidatePaycheck(PaydayTransaction& pt, 
-			int empid, 
-			const Date& payDate, 
-			double pay);
+                        int empid, 
+                        const Date& payDate, 
+                        double pay);
 
 };
-
 
 #endif

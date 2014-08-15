@@ -8,7 +8,7 @@ AddSalariedEmployee::~AddSalariedEmployee()
 
 AddSalariedEmployee::AddSalariedEmployee(int empid, string name, string address, double salary)
   : AddEmployeeTransaction(empid, name, address)
-    , itsSalary(salary)
+  , itsSalary(salary)
 {
 }
 

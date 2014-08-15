@@ -17,25 +17,25 @@ class Date
 {
  public:
   enum DayOfWeek {sunday=0, monday, tuesday, wednesday,
-		  thursday, friday, saturday};
+    thursday, friday, saturday};
   // Canonical Form
   Date();
   Date(int month, int day, int year);
   Date(const Date&);
   virtual ~Date();
   Date& operator= (const Date&);
-    
+
   // Accessors
   int GetMonth() const;
   int GetDay() const;
   int GetYear() const;
   DayOfWeek GetDayOfWeek() const;
   string GetDayOfWeekName() const;
-    
+
   // Input & Output
   friend ostream& operator<< (ostream&, const Date&);
   friend istream& operator>> (istream&, Date&);
-    
+
   // Arithmetic and comparison operators
   int         operator== (const Date&) const;
   int         operator!= (const Date&) const;
@@ -58,11 +58,11 @@ class Date
   {
     return (theDate >= startDate) && (theDate <= endDate);
   }
-    
+
  private:
   time_t      itsTime;
   tm          itsTimeStruct;
-    
+
   static long secondsPerDay;
 };
 
