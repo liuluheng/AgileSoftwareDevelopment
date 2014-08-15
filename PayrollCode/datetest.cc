@@ -17,22 +17,22 @@ int main()
   cout << "Angela's birthday was:   " << angela   << endl;
   cout << "The day after was:        " << angela+1 << endl;
   cout << "The day before was:       " << angela-1 << endl;
-    
+
   Date now;
   cout << "Today is:                 " << now.GetDayOfWeekName()
-       << " " << now << endl;
+      << " " << now << endl;
   cout << "In two weeks it will be:  " << now + 14 << endl;
   cout << "Two weeks ago it was:     " << now - 14 << endl;
-    
+
   Date then = now - 14;
   for (int i=0; i<5; i++)
-    {
-      then -= 365;
-      cout << "365 days before that was: " << then << endl;
-    }
+  {
+    then -= 365;
+    cout << "365 days before that was: " << then << endl;
+  }
   cout << "Days from now to then:    " << (now - then) << endl;
   assert( (now-then) == 365*5+14);
-    
+
   Date yesterday = now-1;
   Date tomorrow = now+1;
   assert(yesterday < now);
@@ -45,13 +45,13 @@ int main()
   assert(yesterday <= now);
   assert(tomorrow==(1+now));
   assert(tomorrow==(now+1));
-    
+
   Date theTarget = now+5;
   for (Date d=now; d<theTarget; d++)
-    {
-      cout << d << " is less than " << theTarget << endl;
-    }
-    
+  {
+    cout << d << " is less than " << theTarget << endl;
+  }
+
   Date x = now;
   assert(x == now);
   assert(x++ == now);
@@ -60,7 +60,7 @@ int main()
   assert(--x == (now+1));
   assert(x-- == (now+1));
   assert(x == now);
-    
+
   istringstream dateStream("   4  /  29    /  1986  ");
   Date gina;
   dateStream >> gina;
@@ -68,7 +68,7 @@ int main()
   Date ginax(4,29,1986);
   cout << "Gina's birthday is known to be: " << ginax << endl;
   assert(gina == ginax);
-    
+
   cout << "Everything seems to work just fine....." << endl;
 }
 

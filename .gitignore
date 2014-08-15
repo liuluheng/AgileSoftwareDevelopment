@@ -23,3 +23,5 @@
 *.pyc
 shape
 *.pdf
+TestRunner
+datetest

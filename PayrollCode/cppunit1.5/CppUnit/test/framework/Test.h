@@ -16,12 +16,12 @@ class TestResult;
 
 class Test
 {
-public:
-    virtual                ~Test () = 0;
+ public:
+  virtual                ~Test () = 0;
 
-    virtual void           run (TestResult *result)    = 0;
-    virtual int            countTestCases ()           = 0;
-    virtual std::string    toString ()                 = 0;
+  virtual void           run (TestResult *result)    = 0;
+  virtual int            countTestCases ()           = 0;
+  virtual std::string    toString ()                 = 0;
 
 
 };

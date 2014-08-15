@@ -9,7 +9,7 @@ UnionAffiliation::~UnionAffiliation()
 
 UnionAffiliation::UnionAffiliation(int memberId, double dues)
 : itsMemberId(memberId)
-    , itsDues(dues)
+, itsDues(dues)
 {
 }
 
