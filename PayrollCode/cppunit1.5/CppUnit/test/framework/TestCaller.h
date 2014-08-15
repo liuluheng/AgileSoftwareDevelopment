@@ -43,15 +43,15 @@
  */
 
 
-template <class Fixture> class TestCaller : public TestCase
-{ 
+template <class Fixture> 
+class TestCaller : public TestCase { 
    REFERENCEOBJECT (TestCaller)
 
    typedef void             (Fixture::*TestMethod)();
     
 public:
                             TestCaller (std::string name, TestMethod test)
-                            : TestCase (name), m_fixture (new Fixture (name)), m_test (test)
+                            : TestCase (name), m_test (test), m_fixture (new Fixture (name))
                             {}
 
 protected:
