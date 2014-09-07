@@ -1,5 +1,5 @@
-CXX = clang++
-CXXFLAGS = -g -Os -Wall -stdlib=libc++ -std=c++11
+CXX 	   = clang++
+CXXFLAGS   = -g -Os -Wall -stdlib=libc++ -std=c++11
 CXXLDFLAGS = -lc++ -lc++abi
 
 all: shape clean
